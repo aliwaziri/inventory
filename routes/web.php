@@ -11,6 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','InventoryController@customer');
+Route::post('/insertcustomer','InventoryController@insertcustomer');
+Route::get('/product','InventoryController@product');
+Route::post('/insertproduct','InventoryController@insertproduct');
+Route::get('/purchase','InventoryController@purchase');
+Route::post('/insertpurchase','InventoryController@insertpurchase');
+Route::get('/sales','InventoryController@sales');
+Route::post('/insertsales','InventoryController@insertsales');
+Route::get('/delete/{cid}','InventoryController@delete');
+Route::get('/edit/{cid}','InventoryController@edit');
+
+
+
+
+
